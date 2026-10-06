@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#07111f">
+
+    <title>Coin Count Pro</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="money-background">
+
+        <span>🪙</span>
+        <span>💰</span>
+        <span>🪙</span>
+        <span>💵</span>
+        <span>🪙</span>
+        <span>💰</span>
+        <span>🪙</span>
+        <span>💵</span>
+
+    </div>
+
+
+    <!-- APP -->
+    <div class="app-container">
+
+
+        <!-- =========================
+             TOP HEADER
+        ========================== -->
+
+        <header class="top-header">
+
+            <div class="brand">
+
+                <div class="brand-coin">
+                    🪙
+                </div>
+
+                <div>
+                    <h1>Coin Count</h1>
+                    <p>Digital Money Counter</p>
+                </div>
+
+            </div>
+
+
+            <button class="icon-button" id="themeButton">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </header>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main>
+
+
+            <!-- =========================
+                 BALANCE CARD
+            ========================== -->
+
+            <section class="balance-card">
+
+                <div class="balance-glow"></div>
+
+                <div class="balance-header">
+
+                    <span>
+                        TOTAL BALANCE
+                    </span>
+
+                    <span class="currency-badge">
+                        USD
+                    </span>
+
+                </div>
+
+
+                <div class="balance-value">
+
+                    <span class="currency-symbol">$</span>
+
+                    <span id="totalBalance">
+                        0.00
+                    </span>
+
+                </div>
+
+
+                <div class="balance-footer">
+
+                    <div>
+                        <i class="fa-solid fa-coins"></i>
+
+                        <span id="totalCoins">
+                            0
+                        </span>
+
+                        Coins
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Counting
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 CURRENCY SWITCH
+            ========================== -->
+
+            <section class="currency-switch">
+
+                <button class="currency-button active"
+                        data-currency="USD">
+
+                    💵 USD
+
+                </button>
+
+                <button class="currency-button"
+                        data-currency="USDT">
+
+                    🪙 USDT
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =========================
+                 SECTION TITLE
+            ========================== -->
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>🪙 Tap to Count</h2>
+
+                    <p>
+                        Tap a coin to add it to your balance
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 COIN GRID
+            ========================== -->
+
+            <section class="coin-grid">
+
+
+                <!-- 25 CENT -->
+
+                <button class="coin-card"
+                        data-value="0.25">
+
+                    <div class="coin-animation">
+                        🪙
+                    </div>
+
+                    <strong>
+                        $0.25
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+
+
+                <!-- 50 CENT -->
+
+                <button class="coin-card"
+                        data-value="0.50">
+
+                    <div class="coin-animation">
+                        🪙
+                    </div>
+
+                    <strong>
+                        $0.50
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+
+
+                <!-- $1 -->
+
+                <button class="coin-card"
+                        data-value="1">
+
+                    <div class="coin-animation">
+                        🪙
+                    </div>
+
+                    <strong>
+                        $1
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+
+
+                <!-- $5 -->
+
+                <button class="coin-card"
+                        data-value="5">
+
+                    <div class="coin-animation">
+                        🪙
+                    </div>
+
+                    <strong>
+                        $5
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+
+
+                <!-- $10 -->
+
+                <button class="coin-card"
+                        data-value="10">
+
+                    <div class="coin-animation">
+                        💵
+                    </div>
+
+                    <strong>
+                        $10
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+
+
+                <!-- $20 -->
+
+                <button class="coin-card"
+                        data-value="20">
+
+                    <div class="coin-animation">
+                        💵
+                    </div>
+
+                    <strong>
+                        $20
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+
+
+                <!-- $50 -->
+
+                <button class="coin-card"
+                        data-value="50">
+
+                    <div class="coin-animation">
+                        💵
+                    </div>
+
+                    <strong>
+                        $50
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+
+
+                <!-- $100 -->
+
+                <button class="coin-card"
+                        data-value="100">
+
+                    <div class="coin-animation">
+                        💵
+                    </div>
+
+                    <strong>
+                        $100
+                    </strong>
+
+                    <span class="coin-count">
+                        × <span>0</span>
+                    </span>
+
+                    <small>
+                        TAP
+                    </small>
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =========================
+                 ACTION BUTTONS
+            ========================== -->
+
+            <section class="action-buttons">
+
+                <button class="action-button undo-button"
+                        id="undoButton">
+
+                    <i class="fa-solid fa-rotate-left"></i>
+
+                    Undo
+
+                </button>
+
+
+                <button class="action-button reset-button"
+                        id="resetButton">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Reset
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =========================
+                 QUICK SUMMARY
+            ========================== -->
+
+            <section class="summary-card">
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-coins"></i>
+
+                    <div>
+
+                        <span>Total Coins</span>
+
+                        <strong id="summaryCoins">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-divider"></div>
+
+
+                <div class="summary-item">
+
+                    <i class="fa-solid fa-dollar-sign"></i>
+
+                    <div>
+
+                        <span>Total Value</span>
+
+                        <strong>
+                            $<span id="summaryBalance">0.00</span>
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =========================
+             BOTTOM NAVIGATION
+        ========================== -->
+
+        <nav class="bottom-navigation">
+
+
+            <button class="nav-item active">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Home</span>
+
+            </button>
+
+
+            <button class="nav-item">
+
+                <i class="fa-solid fa-coins"></i>
+
+                <span>Count</span>
+
+            </button>
+
+
+            <button class="nav-item">
+
+                <i class="fa-solid fa-gift"></i>
+
+                <span>Rewards</span>
+
+            </button>
+
+
+            <button class="nav-item">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>Wallet</span>
+
+            </button>
+
+
+            <button class="nav-item">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </button>
+
+
+        </nav>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/storage.js"></script>
+
+    <script src="js/animations.js"></script>
+
+    <script src="js/counter.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
